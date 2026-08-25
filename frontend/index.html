@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>URL Shortener</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="card">
+
+            <h1>URL Shortener</h1>
+
+            <p class="subtitle">
+                Create short, shareable links in seconds.
+            </p>
+
+            <form id="urlForm">
+
+                <label for="urlInput">
+                    Enter your URL
+                </label>
+
+                <input
+                    type="url"
+                    id="urlInput"
+                    placeholder="https://example.com"
+                    required
+                >
+
+                <label for="aliasInput">
+                    Custom alias
+                    <span>(optional)</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="aliasInput"
+                    placeholder="my-link"
+                    maxlength="10"
+                >
+
+                <button type="submit" id="shortenButton">
+                    Shorten URL
+                </button>
+
+            </form>
+
+            <div id="loading" class="hidden">
+                Creating your short URL...
+            </div>
+
+            <div id="errorMessage" class="error hidden"></div>
+
+            <div id="result" class="result hidden">
+
+                <h2>Your Short URL</h2>
+
+                <div class="short-url-container">
+
+                    <a
+                        id="shortUrl"
+                        href="#"
+                        target="_blank"
+                    ></a>
+
+                    <button id="copyButton" type="button">
+                        Copy
+                    </button>
+
+                </div>
+
+                <div class="stats">
+
+                    <p>
+                        <strong>Original URL:</strong>
+                        <span id="originalUrl"></span>
+                    </p>
+
+                    <p>
+                        <strong>Short Code:</strong>
+                        <span id="shortCode"></span>
+                    </p>
+
+                    <p>
+                        <strong>Clicks:</strong>
+                        <span id="clickCount">0</span>
+                    </p>
+
+                </div>
+
+                <button id="statsButton" type="button">
+                    Refresh Statistics
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+# Environment variables
+.env
+.env.*
+
+# Java / Maven
+backend/target/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
