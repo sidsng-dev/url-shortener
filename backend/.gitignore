@@ -1,0 +1,13 @@
+# Maven
+backend/target/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Environment
+.env
